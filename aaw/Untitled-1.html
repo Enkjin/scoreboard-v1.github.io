@@ -1,7 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Lobster+Two:ital@1&family=Unna&family=Varela+Round&display=swap');
+    h3 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        background-color: blue;
+        height: 400px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .first,.second{
+        height: 100%;
+        width: 50%;
+        margin: 10px;
+        background-color: black;
+    }
+    h1 {
+        display: flex;
+      justify-content: center;
+        color: white;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 100px;
+    }
+    .button{
+      height: 20px;
+      
+    }
+</style>
+    </head>
     <body>
-        <a href="C:\Users\User\Documents\itv2022\scoreboard-v1.github.io\aaw\Untitled-1.html" >click here </a>
+        <h3> Matching</h3>
+        <div class="main">
+        <div  class="first">
+            <h1 id="onoo1"> onoo</h1>
+            <button class="button"  onclick="Add1()">onoo nemeh</button>
+        </div>
+        <div class="second">
+            <h1 id="onoo2"> onoo</h1>
+            <button class="button"  onclick="Add2()">onoo nemeh</button>
+        </div>
+    </div>
+        <script>
+            var i=0,j=0;
+           function Add1(){
+            i=i+1;
+            document.getElementById('onoo1').innerHTML = i; 
+            }
+            function Add2(){
+            j=j+1;
+            document.getElementById('onoo2').innerHTML = j; 
+            }
+        </script>
     </body>
 </html>
