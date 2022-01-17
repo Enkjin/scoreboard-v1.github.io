@@ -10,12 +10,11 @@
         justify-content: center;
     }
     .main{
-        background-color: blue;
+        background-color: greenyellow;
         height: 400px;
         width: 100%;
         display: flex;
         align-items: center;
-        margin-top: 100px;
     }
     .first,.second{
         height: 100%;
@@ -25,39 +24,85 @@
     }
     h1 {
         display: flex;
-      justify-content: center;
-        color: white;
+       justify-content: center;
+        color: greenyellow;
         font-family: 'Varela Round', sans-serif;
         font-size: 100px;
     }
     .button{
-      height: 20px;
+      height: 50px;
+      width: 50px;
+      border: 10px solid black ;
       
     }
+    .box{
+        display: flex;
+        justify-content: center;
+    }
+    .name{
+        display: flex;
+        height: auto;
+        width: 100%;
+        background-color: black;
+        flex-wrap: nowrap;
+       border: 10px solid greenyellow;
+    }
+   .demo1 , .demo2{
+       height: 200px;
+       width: 50%;
+   }
 </style>
     </head>
     <body>
         <h3> Matching</h3>
+        <button onclick="myFunction()"> Баг оруулах</button>
+        <div class="name">
+           <div class="demo1"> <h1 id="demo1"></h1></div>
+           <div class="demo2"> <h1 id="demo2" ></h1></div> 
+        </div>
         <div class="main">
         <div  class="first">
-            <h1 id="onoo1"> onoo</h1>
-            <button class="button"  onclick="Add1()">onoo nemeh</button>
+            <h1 id="onoo1"> 0</h1>
+            <div class="box">
+            <button class="button"  onclick="Add1()">+</button>
+            <button class="button"  onclick="Minus1()">-</button>
+             </div>
         </div>
         <div class="second">
-            <h1 id="onoo2"> onoo</h1>
-            <button class="button"  onclick="Add2()">onoo nemeh</button>
+            <h1 id="onoo2"> 0</h1>
+            <div class="box">
+            <button class="button"  onclick="Add2()">+</button>
+            <button class="button"  onclick="Minus2()">-</button>
+        </div>
         </div>
     </div>
         <script>
-            var i=0,j=0;
+                var i=0 , 
+                    j=0 ;
            function Add1(){
-            i=i+1;
-            document.getElementById('onoo1').innerHTML = i; 
+                i=i+1;
+               document.getElementById('onoo1').innerHTML = i;
+            }
+            function Minus1(){
+                i=i-1;
+                document.getElementById('onoo1').innerHTML = i;
             }
             function Add2(){
-            j=j+1;
-            document.getElementById('onoo2').innerHTML = j; 
+                j=j+1;
+                document.getElementById('onoo2').innerHTML = j;
             }
+            function Minus2(){
+                j=j-1;
+                document.getElementById('onoo2').innerHTML = j;
+            }
+            function myFunction() {
+            let person1 = prompt("1-ээр багийг оруулна уу?");
+            let person2 = prompt("2-аар багийг оруулна уу?");
+            if (person1 != null && person2 != null) {
+            document.getElementById("demo1").innerHTML = person1 ;
+            document.getElementById("demo2").innerHTML = person2 ;
+             }
+}
         </script>
     </body>
 </html>
